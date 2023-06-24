@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
+    <link rel="stylesheet" href="index.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
+   </head>
+<body >
+    <div class="sidebar open">
+        <div class="logo-details">
+          <!-- <i class='bx bxl-c-plus-plus icon'></i> -->
+          
+            <div class="logo_name mt-4 ms-2" style="color: #11101D;">MC with AyeJude</div>
+            <i class='bx bx-menu-alt-right' id="btn"  style="color: #11101D;"></i>
+        </div>
+        <ul class="nav-list">
+          <!-- <li>
+              <i class='bx bx-search' ></i>
+             <input type="text" placeholder="Search...">
+             <span class="tooltip">Search</span>
+          </li> -->
+          <li>
+            <!-- <button > -->
+            <a onclick="scrollToDiv('home')">
+              <i class='bx bx-grid-alt'></i>
+              <span class="links_name">Home</span>
+            </a>
+        <!-- </button> -->
+             <span class="tooltip">Home</span>
+          </li>
+          <li>
+           <a onclick="scrollToDiv('about')">
+            <!-- <i class="fa fa-list" aria-hidden="true"></i> -->
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+             <span class="links_name">Information</span>
+           </a>
+           <span class="tooltip">Information</span>
+         </li>
+          <li>
+           <a onclick="scrollToDiv('guide')">
+             <i class='bx bx-user' ></i>
+             <span class="links_name">Guide</span>
+           </a>
+           <span class="tooltip">Guide</span>
+         </li>
+         <li>
+           <a onclick="scrollToDiv('contact')">
+            <!-- <i class="fa fa-line-chart" aria-hidden="true"></i> -->
+            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+             <span class="links_name">Contact Us</span>
+           </a>
+           <span class="tooltip">Contact Us</span>
+         </li>
+         <li>
+
+         <!-- <li>
+           <a href="#">
+             <i class='bx bx-cart-alt' ></i>
+             <span class="links_name">Order</span>
+           </a>
+           <span class="tooltip">Order</span>
+         </li> -->
+         <!-- <li>
+           <a href="#">
+             <i class='bx bx-heart' ></i>
+             <span class="links_name">Saved</span>
+           </a>
+           <span class="tooltip">Saved</span>
+         </li> -->
+         <!-- <li>
+           <a href="#">
+             <i class='bx bx-cog' ></i>
+             <span class="links_name">Setting</span>
+           </a>
+           <span class="tooltip">Setting</span>
+         </li> -->
+         <li class="profile">
+             <div class="profile-details">
+               <!--<img src="profile.jpg" alt="profileImg">-->
+               <div class="name_job">
+                 <div class="name">WELCOME</div>
+                 <!-- <div class="job">Web designer</div> -->
+               </div>
+             </div><i></i>
+             <div class="name">Mani Chegu</div>
+             <i class='bx bx-log-out zoom' id="log_out" ></i>
+             <span class="tooltip">Logout</span>
+         </li>
+        </ul>
+      </div>
+
+
+
+
+<section class="home-section p-4" style="background-color: #11101D;">
+
+
+    <!-- <section id="mens" class="w-100 position-relative m-0 pb-1" >
+        <img class="w-100 " src="https://cdn.shopify.com/s/files/1/1802/9059/files/MENS-PAGE-BANNER_1024x1024.jpg?v=1526491275">
+        <img id="mens_img" class="position-absolute bottom-0 end-0 mt-4  mx-2 mb-2" style="height:20%; opacity:60%;"
+        src="https://i.ibb.co/QjLGztp/White-logo-no-background.png">
+       </section> -->
+      <!-- <center><h1>Home</h1></center> -->
+      <!-- <section class="row pb-1 m-0">
+    <section class="col-4 p-1 " >
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators" >
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://i.ibb.co/N64xr5x/shirt-3-b.jpg"   class="position-relative d-block w-100" alt="...">
+            <h1 class="position-absolute top-0 start-0 m-4 p-4 fw-bold fst-italic" style="color:rgba(255, 255, 255, 0.472) ;">Quality never goes out<br> of style</h1>
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.ibb.co/0fmm57Q/sweatshirt-7-c.jpg"   class="position-relative d-block w-100" alt="...">
+            <h1 class="position-absolute top-0 start-0 m-2 p-2 fw-bolder fst-italic" style="color:rgba(255, 255, 255, 0.472) ;" >We promise comfort....</h1>
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.ibb.co/LS5jCgX/shirt-7-a.jpg" class="position-relative d-block w-100" alt="...">
+            <h1 class="position-absolute top-0 start-0 m-2 p-4 fw-bold fst-italic" style="color:rgba(255, 255, 255, 0.472) ;">Be unique,be brave....</h1>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    
+    </section>
+    <section class="col-4 p-1 " >
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://i.ibb.co/3fXhwS1/sweatshirt-4-d.jpg" class=" position-relative d-block w-100" alt="...">
+            <h1 class="position-absolute fw-uppercase bottom-0 start-0 p-2 fw-bold fst-italic " style="color: rgba(245, 245, 245, 0.815);">Feel good with us.</h1>
+          </div>
+         
+        </div>
+      </div>
+      
+    </section>
+    
+    <section class="col-4 p-1 ">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://i.ibb.co/tYSjVzw/sweatshirt-6-c.jpg" class=" position-relative d-block w-100" alt="...">
+            <p id="text" class="position-absolute fw-uppercase  top-0 start-0 p-2 m-0 fw-bold fst-italic " style="color:rgb(255, 217, 0); ">Fashion<br>as<br>unique<br>as<br>you<br>are</p>
+          </div>
+         
+        </div>
+      </div>
+      
+    </section>
+    
+      </section> -->
+      
+      <section class="row p-0 m-0 " id="home">
+        <center>
+            <div class="pt-4">
+                <img src="https://i.ibb.co/QjLGztp/White-logo-no-background.png" style="height:100px">
+                <h1 class="p-4 text-warning" >Our Collections</h1>
+            </div>
+            
+    </center>
+        <section class="col-lg-4 p-4 ">
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://i.ibb.co/Rv0T0xv/shirt-3-d.jpg" class="zoom position-relative d-block w-100 p-4" alt="...">
+               
+                <a class="collection_text p-4 fs-4 text-light" style="text-decoration: none;" href="#">Shirts  -></a>
+              </div>
+             
+            </div>
+          </div>
+          
+        </section>
+        <section class="col-lg-4 p-4" >
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://i.ibb.co/k2nYLP0/sweatshirt-6-b.jpg" class="zoom position-relative d-block w-100 p-4" alt="...">
+               
+                <a class="collection_text p-4 fs-4 text-light" style="text-decoration: none;" href="#">Sweatshirts  -></a>
+              </div>
+             
+            </div>
+          </div>
+          
+        </section>
+        <section class="col-lg-4 p-4 " >
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://i.ibb.co/LYtPhkj/Hoodiesandjackets-4-a.jpg" class="zoom position-relative d-block w-100 p-4" alt="...">
+                <a class="collection_text p-4  fs-4 text-light" style="text-decoration: none;" href="#">Shop  -></a>
+              </div>
+             
+            </div>
+          </div>
+          
+        </section>
+       </section>
+      
+         
+     
+    
+    
+    <section id="about" >
+    
+      
+    
+
+      <section id="about_us" class=" text-light m-2 mt-4 mb-4 " >
+        <section class="zoom" style="background-color: #E4E9F7; color:#11101D; border-radius: 20px; margin-top: 10%;padding:4%; ">
+            <center>
+                <section class="">
+                    <h1 style="font-weight: bolder;">INFORMATION</h1>
+                    <p>With a commitment to luxury, simplicity and style, THE MC celebrates the ways in which design can enhance our lives. THE MC offers a careful chosen collection of premium clothing products along with AyeJude styling .</p>
+                </section>
+            </center> 
+                <br>
+                <br>
+              
+            <center> 
+                <h3>What Aye Jude and MC can bring you:</h3>
+                    <h4 class="text-warning">How to Look and Feel Stylish </h4>
+                    <!-- <hr> -->
+                </center> 
+        
+  
+        <br>
+        <br>
+        <section  class="row w-100 p-4">
+
+                <div class="col-lg-4">
+                    <ul>
+                        Discovering Your Style
+                        <li>Have a reference point.</li>
+                        <li>Dress to fit your lifestyle.</li>
+                        <li>Act your style.</li>
+                      </ul>
+                </div>
+                <div class="col-lg-4">
+                    <ul>
+                        Building Your Wardrobe
+                        <li>Shop for outfits.</li>
+                        <li>Buy quality that lasts.</li>
+                        <li>Have foundation pieces.</li>
+                      </ul>
+                </div>
+                <div class="col-lg-4">
+                    <ul>
+                        Impressing with Details
+                        <li>Have a grooming regimen.</li>
+                        <li>Accessorize your outfits.</li>
+                        <li>Don't over-do it.</li>
+                      </ul>
+                </div>
+
+            </section>
+           
+            
+            
+          </section>
+
+
+
+
+           <!-- <section id="mens" class="w-100 position-relative m-0 pb-1" >
+        <img class="w-100 " src="https://cdn.shopify.com/s/files/1/1802/9059/files/MENS-PAGE-BANNER_1024x1024.jpg?v=1526491275">
+        <img id="mens_img" class="position-absolute bottom-0 end-0 mt-4  mx-2 mb-2" style="height:20%; opacity:60%;"
+        src="https://i.ibb.co/QjLGztp/White-logo-no-background.png">
+       </section>
+      <center><h1>Home</h1></center> -->
+      <section class="row pb-1 ms-2 me-2 " style="margin:6%; padding:2%;">
+    <section class="col-lg-4 p-1 " >
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators" >
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://i.ibb.co/N64xr5x/shirt-3-b.jpg"   class="position-relative d-block w-100" alt="...">
+            <h1 class="position-absolute top-0 start-0 m-4 p-4 fw-bold fst-italic" style="color:rgba(255, 255, 255, 0.472) ;">Quality never goes out<br> of style</h1>
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.ibb.co/0fmm57Q/sweatshirt-7-c.jpg"   class="position-relative d-block w-100" alt="...">
+            <h1 class="position-absolute top-0 start-0 m-2 p-2 fw-bolder fst-italic" style="color:rgba(255, 255, 255, 0.472) ;" >We promise comfort....</h1>
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.ibb.co/LS5jCgX/shirt-7-a.jpg" class="position-relative d-block w-100" alt="...">
+            <h1 class="position-absolute top-0 start-0 m-2 p-4 fw-bold fst-italic" style="color:rgba(255, 255, 255, 0.472) ;">Be unique,be brave....</h1>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    
+    </section>
+    <section class="col-lg-4 p-1 " >
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://i.ibb.co/3fXhwS1/sweatshirt-4-d.jpg" class=" position-relative d-block w-100" alt="...">
+            <h1 class="position-absolute fw-uppercase bottom-0 start-0 p-2 fw-bold fst-italic " style="color: rgba(245, 245, 245, 0.815);">Feel good with us.</h1>
+          </div>
+         
+        </div>
+      </div>
+      
+    </section>
+    
+    <section class="col-lg-4 p-1 ">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://i.ibb.co/tYSjVzw/sweatshirt-6-c.jpg" class=" position-relative d-block w-100" alt="...">
+            <p id="text" class="position-absolute fw-uppercase  top-0 start-0 p-2 m-0 fw-bold fst-italic " style="color:rgb(255, 217, 0); ">Fashion<br>as<br>unique<br>as<br>you<br>are</p>
+          </div>
+         
+        </div>
+      </div>
+      
+    </section>
+    
+      </section>
+      
+      </section>
+ 
+
+      <section id="text_section"  class="row  ms-2 me-2 p-4 zoom" style="background-color: #E4E9F7; border-radius: 20px;">
+        <div class="offset-lg-4 col-lg-4 p-1">
+            <p class="fs-6 text-uppercase text-warning">learn-buy-style</p>
+        <h1 class="" style="color:#11101D;">WHY US</h1>
+            <div class="dropdown">
+                <p id="PREMIUM_QUALITY" class="zoom  text-light mb-1 p-4 position-relative" style="background-color:#11101D;" >PREMIUM QUALITY<img id="img_PQ" class="zoomm position-absolute  end-0 m-2" src="https://www.freeiconspng.com/uploads/white-down-arrow-png-2.png" style="width:15px; height: 15px; align-items: flex-end;"></img></p>
+                <p id="ENHANCED_SOFTNESS" class="zoom text-light  mb-1 p-4 position-relative" style="background-color:#11101D;" >STYLING<img id="img_ES" class="zoomm position-absolute  end-0 m-2" src="https://www.freeiconspng.com/uploads/white-down-arrow-png-2.png" style="width:15px; height: 15px;"></p>
+            </div>
+        </div>
+      </section>
+    </section>
+<section>
+
+<section id="guide" class="ms-2 me-2 zoom" style="background-color: #E4E9F7; color:#11101D; border-radius: 20px; margin-top: 8%;  margin-bottom: 8%; padding:4%; " >
+    <center><h1 style="font-weight: bolder;">Guide</h1></center>
+    <h4>SECTION 1 - ONLINE STORE TERMS</h4>
+    <p>By agreeing to these Terms of Service, you represent that you are at least the age of majority in your state or province of residence, or that you are the age of majority in your state or province of residence and you have given us your consent to allow any of your minor dependents to use this site.
+      You may not use our products for any illegal or unauthorized purpose nor may you, in the use of the Service, violate any laws in your jurisdiction (including but not limited to copyright laws).
+      You must not transmit any worms or viruses or any code of a destructive nature.
+      A breach or violation of any of the Terms will result in an immediate termination of your Services.</p>
+      <h4>SECTION 2 - GENERAL CONDITIONS</h4>
+      <p>
+        We reserve the right to refuse Service to anyone for any reason at any time.
+You understand that your content (not including credit card information), may be transferred unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices. Credit card information is always encrypted during transfer over networks.
+You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use of the Service, or access to the Service or any contact on the website through which the Service is provided, without express written permission by us.
+The headings used in this agreement are included for convenience only and will not limit or otherwise affect these Terms.
+      </p>
+      <h4>SECTION 3 - ACCURACY, COMPLETENESS AND TIMELINESS OF INFORMATION</h4>
+      <p>We are not responsible if information made available on this site is not accurate, complete or current. The material on this site is provided for general information only and should not be relied upon or used as the sole basis for making decisions without consulting primary, more accurate, more complete or more timely sources of information. Any reliance on the material on this site is at your own risk.
+        This site may contain certain historical information. Historical information, necessarily, is not current and is provided for your reference only. We reserve the right to modify the contents of this site at any time, but we have no obligation to update any information on our site. You agree that it is your responsibility to monitor changes to our site.</p>
+        <h4>MODIFICATIONS TO THE SERVICE AND PRICES</h4>
+        <p>Prices for our products are subject to change without notice.
+          We reserve the right at any time to modify or discontinue the Service (or any part or content thereof) without notice at any time.
+          We shall not be liable to you or to any third-party for any modification, price change, suspension or discontinuance of the Service.</p>
+</section>
+
+
+</section>
+
+
+  <div class="row ms-2 me-2 zoom" id="contact" style="background-color: #E4E9F7; border-radius: 20px; margin-top: 10%; color: #11101D;" >
+    <div class="offset-lg-3 col-lg-6">
+      <div id="contact_heading">
+        <h1  class=" m-4 fw-bold">Contact</h1>
+      </div>
+      <div class="row m-2 ">
+        <div class="col text-dark "><input id=" name_input" class="zoom w-100 p-4" type="text" placeholder="Name"></div>
+        <div class="col"><input id="email_input" class="zoom w-100 p-4" type="email" placeholder="Email *" required></div>
+      </div>
+      <div class="row m-2">
+        <div class="col"><input id="phone_number_input" type="number" class="zoom w-100 p-4" placeholder="Phone number" ></div>
+      </div>
+      <div class="row m-2">
+        <div class="col"><input id="comment_input" type="text" class="zoom w-100 p-4" placeholder="Comment" ></div>
+      </div>
+      <div class="row m-3 p-1">
+        <div type="submit" id="send_button" class=" zoom col-2 text-light p-2  text-center" style="background-color: #11101D;">send</div>
+      </div>
+    </div>
+  </div>
+  
+
+    
+      <!-- As a link -->
+      <nav id="footer" class="navbar  navbar text-light  p-2 " style="margin-top: 10%;">
+    
+       
+    
+    
+        <div class="container row">
+    
+           <div class="col-lg-4 text-center mb-4 text-center">
+          <img src="https://i.ibb.co/QjLGztp/White-logo-no-background.png" style="height:100px">
+        </div>
+            <div id="find_us_on" class="col-lg-2  mb-4">
+                <h4>Find us on</h4>
+                <a class="text" href="https://www.facebook.com/profile.php?id=100087419500577" style="text-decoration: none; color: white;"><img src="https://i.ibb.co/cQzLTC1/icons8-facebook-48.png" alt="...." style="height:22px" class="m-1">FACEBOOK</a><br>
+                <a class="text" href="https://www.instagram.com/ajayfromayejude/" style="text-decoration: none; color: white;"><img src="https://i.ibb.co/mS1xsCq/Pngtree-instagram-icon-8704817.png" style="height:20px" class="m-1">INSTAGRAM</a><br>
+                <a class="text" href="https://www.youtube.com/ayejude" style="text-decoration: none; color: white;"><img src="https://i.ibb.co/3cMbk7H/icons8-youtube-48.png" style="height:20px" class="m-1 ">YOUTUBE</a><br>
+            </div>
+           
+            <div id="Help_&_Support" class="col-lg-2 mb-4">
+                <h4>Help&Support</h4>
+                <a style="text-decoration: none; color: white;" href="#" class="text">Refund</a><br>
+                <a style="text-decoration: none; color: white;" href="#" class="text">Terms&Conditions</a><br>
+                <a style="text-decoration: none; color: white;" href="#" class="text">Shipping</a>
+            </div>
+           
+        </div>
+      </nav>
+    
+</section>
+  
+  <script>
+  
+       function scrollToDiv(divId) {
+document.getElementById(divId).scrollIntoView({ behavior: "smooth" });
+       }
+    
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+//   let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+//   searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+//     sidebar.classList.toggle("open");
+//     menuBtnChange(); //calling the function(optional)
+//   });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+
+  img_PQ.addEventListener('click',addText_PQ)
+        function addText_PQ(){
+            if(img_PQ.src=="https://www.freeiconspng.com/uploads/white-down-arrow-png-2.png"){
+                img_PQ.src="http://www.clker.com/cliparts/z/z/h/C/V/5/up-white-arrow-hi.png"
+                let appendText=document.createElement("div");
+                appendText.id="appendText_PQ";
+                appendText.innerHTML=`<p>Designed with superior combed and ring-spun cotton that acts as the best blank canvas for printing.</p>`;
+                PREMIUM_QUALITY.append(appendText);
+            }
+            else if(img_PQ.src="http://www.clker.com/cliparts/z/z/h/C/V/5/up-white-arrow-hi.png"){
+                img_PQ.src="https://www.freeiconspng.com/uploads/white-down-arrow-png-2.png"
+                appendText_PQ.remove();
+            }
+        }
+        img_ES.addEventListener('click',addText_ES)
+        function addText_ES(){
+            if(img_ES.src=="https://www.freeiconspng.com/uploads/white-down-arrow-png-2.png"){
+                img_ES.src="http://www.clker.com/cliparts/z/z/h/C/V/5/up-white-arrow-hi.png"
+                let appendText=document.createElement("div");
+                appendText.id="appendText_ES";
+                appendText.innerHTML=`<p>All of us buy clothes but most of us dont know how to style them here we made styling more easier with AyeJude </p>`
+                ENHANCED_SOFTNESS.append(appendText);
+            }
+            else if(img_ES.src="http://www.clker.com/cliparts/z/z/h/C/V/5/up-white-arrow-hi.png"){
+                img_ES.src="https://www.freeiconspng.com/uploads/white-down-arrow-png-2.png"
+                appendText_ES.remove();
+            }
+        }
+  </script>
+  <script src="https://kit.fontawesome.com/ac0eb1b1c0.js" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
